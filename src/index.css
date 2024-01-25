@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Things */
+
+.container {
+  @apply w-[90%] lg:w-[70%] mx-auto;
+}
+
+.sectionH1 {
+  @apply text-3xl lg:text-5xl font-semibold;
+}
+
+.sectionP {
+  @apply border-b-4 border-custom_orange  w-fit mx-auto pb-4 font-thin;
+}
+
+/* Landing Component ./Components/Landing.jsx */
+
+.LandingHeader {
+  @apply flex justify-between items-center w-[90%] mx-auto p-4;
+}
+
+.Logo {
+  @apply text-white font-bold text-3xl;
+}
+
+.LandingSection {
+  @apply flex justify-center items-center h-[100vh];
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 CSS STYLES                                 */
+/* -------------------------------------------------------------------------- */
+
+.bgLanding {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgLanding-work {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* For small screens */
+@media only screen and (max-width: 600px) {
+  .bgLanding {
+    background-image: url("./assets/Landing/bgphone.png");
+  }
+  .bgLanding-work {
+    background-image: url("./assets/Landing/bgphone.png");
+  }
+}
+
+/* For medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .bgLanding {
+    background-image: url("./assets/Landing/bgtab.png");
+  }
+  .bgLanding-work {
+    background-image: url("./assets/Landing/bgtab.png");
+  }
+}
+
+/* For large screens */
+@media only screen and (min-width: 1025px) {
+  .bgLanding {
+    background-image: url("./assets/Landing/bg.png");
+  }
+  .bgLanding-work {
+    background-image: url("./assets/Landing/bg.png");
+  }
+}
+
+.custom-shape {
+  width: 100%; /* Adjust the width as needed */
+  height: fit-content; /* Adjust the height as needed */
+  background-color: #1d2028; /* Set your desired background color */
+  clip-path: polygon(100% 13%, 100% 83%, 0 100%, 0 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-shape2 {
+  width: 100%; /* Adjust the width as needed */
+  height: fit-content; /* Adjust the height as needed */
+  background-color: #87c856; /* Set your desired background color */
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-shape3 {
+  width: 100%; /* Adjust the width as needed */
+  height: fit-content; /* Adjust the height as needed */
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 87%,
+    0 100%
+  ); /* Adjust the slope at the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .custom-shape3 {
+    clip-path: none;
+  }
+}
+
+.custom-shape2-working {
+  width: 100%; /* Adjust the width as needed */
+  height: fit-content; /* Adjust the height as needed */
+  background-color: #87c856; /* Set your desired background color */
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .custom-shape,
+  .custom-shape2 {
+    clip-path: none;
+  }
+}
